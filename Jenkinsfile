@@ -8,7 +8,7 @@ podTemplate(containers: [
   ]) {
     node(POD_LABEL) {
       stage('Run pipeline against a gradle project - test MAIN') {
-        git branch: 'main', url: 'https://github.com/dlambrig/umlS22.git'
+        git branch: 'main', url: 'https://github.com/satty9675/devops-week6.git'
         container('gradle') {
           stage('Build a gradle project') {
             echo "I am the ${env.BRANCH_NAME} branch"
