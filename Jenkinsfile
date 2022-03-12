@@ -38,14 +38,12 @@ podTemplate(yaml: '''
   node(POD_LABEL) {
     withEnv(['container=docker']) {
     stage('Build a gradle project') {
-      git 'https://github.com/dlambrig/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition.git'
+      git 'https://github.com/satty9675/devops-week6.git'
       container('gradle') {
         stage('Build a gradle project') {
           echo "container Value ${env.container}"
           sh '''
                     pwd
-		    ls	
-		    cd Chapter08/sample1/	
 		    ls	
                     chmod +x gradlew
                     ./gradlew build
