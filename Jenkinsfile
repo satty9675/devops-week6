@@ -45,7 +45,7 @@ podTemplate(yaml: '''
           sh '''
                     pwd
 		    ls	
-		    cd /Chapter08/sample1/	
+		    cd Chapter08/sample1/	
 		    ls	
                     chmod +x gradlew
                     ./gradlew build
